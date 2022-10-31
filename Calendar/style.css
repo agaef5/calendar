@@ -1,0 +1,423 @@
+/*--------------- Whole Page ---------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html{
+    font-size: 72%;
+    overflow: scroll;
+}
+
+:root{
+    --orange: #EA684C;
+    --yellow: #F8B236;
+    --grey: #40454B;
+    --white: #fff;
+    font-family: Montserrat,sans-serif;
+}
+
+/*--------------- 2 row Column ---------------*/
+.column {
+    float: left;
+    width: 50%;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*--------------- Calendar ---------------*/
+
+.container{
+    width: 100%;
+    height: 100%;
+    color: #eee;
+    display: flex;
+    margin-top: 70px;
+    margin-left: 70px;
+}
+
+.calendar{
+    width: 45rem;
+    height: 50rem;
+    background-color: #262626;
+    box-shadow: 0 .5rem 3rem rgba(0, 0, 0, .4);
+    border-radius: 20px;
+}
+
+.month{
+    width: 100%;
+    height: 10rem;
+    background-color: #EA684C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.month i{
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.month h1{
+    font-size: 3rem;
+    font-weight: 400;
+    /* text-transform: ; */
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.month p{
+    font-size: 1.6rem;
+}
+
+.weekdays {
+    width: 100%;
+    height: 5rem;
+    padding: 0 0.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.weekdays div{
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    width: calc(44.2rem /7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: .2rem;
+    cursor: pointer;
+}
+
+.days div{
+    font-size: 1.4rem;
+    margin: .3rem;
+    width: calc(40.2rem /7);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.days div:hover:not(.today){
+    background-color: #262626;
+    border: .2rem solid #777;
+    cursor: pointer;
+}
+
+.prev-date,
+.next-date{
+    opacity: 0.5;
+}
+
+.today{
+    background-color: #EA684C;
+    border-radius: 30px;
+}
+
+/*--------------- End Calendar ---------------*/
+/*--------------- List of Events ---------------*/
+.inprogram{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    font-size: 34px;
+    margin-top: 100px;
+}
+
+.line {
+    border-bottom: 4px solid #EA684C;
+    display: block;
+    margin-top: 55px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.list{
+    margin-right: 50px;
+    margin-top: 45px;
+    margin-left: 80px;
+    margin-right: 60px;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    max-height: 400px;
+    font-size: 20px;
+}
+
+.events {
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    height: 5rem;
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*.groupEvents {
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    height: 5rem;
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    font-size: 15px;
+}*/
+
+.cleaning {
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    height: 5rem;
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.laundrette {
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    height: 5rem;
+    text-align: center;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/*--------------- Navigation Bar ---------------*/
+body{
+    margin: 0px;
+    overflow: hidden;
+    top: 0px;
+    bottom: 0px;
+}
+
+#navigationbar {
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 5;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    border: 5px solid #F18872;
+
+
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: montserrat,sans-serif;
+    font-weight: 300;
+}
+
+.rightside{
+    position: relative;
+}
+
+.logo {
+    padding: 10px;
+}
+
+.logo h2{
+    margin: 0;
+    font-family: SansationBold, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 0.8em;
+    color: black;
+}
+
+.logo h3{
+    margin: 0;
+    font-family: SansatioLight, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.2em;
+    color: #aaaaaa;
+}
+
+.leftside ul, .rightside ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    font-size: 1.2em;
+}
+
+.leftside li, .rightside li{
+    padding: 0.6em;
+}
+
+.leftside a, .rightside a{
+    text-decoration: none;
+    padding: 0.6em;
+    color: black;
+}
+
+.leftside a:hover, .rightside a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 0.2em;
+    text-decoration-color: #F18872;
+}
+
+   
+#vertical_line{
+    border: 0.04em solid #F18872;
+    background-color: #F18872;
+    height: 2em;
+    width: 2px;
+}
+
+.langswitch{
+    font-weight: 800;
+}
+
+.rightside p{
+    margin: 0;
+}
+
+/*--------------- Filter ---------------*/
+.dropbtn {
+    background-color: #EA684C;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-left: 600px;
+    position: absolute;
+    margin-top: 90px;
+}
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #EA684C;
+}
+/* The search field */
+#myInput {
+    box-sizing: border-box;
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+/* The search field when it gets focus/clicked on */
+#myInput:focus {outline: 3px solid #ddd;}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: absolute;
+    display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    border: 1px solid #ddd;
+    z-index: 1;
+    margin-left: 405px;
+    margin-top: 141px;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+.info-text.h2{
+    background-color: #40454B;
+}
+
+/*--------------- More Information ---------------*/
+details > summary {
+    padding: 4px;
+    width: 75px;
+    cursor: pointer;
+    size: 1px;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 630px;
+}
+
+details > summary > .moreinfo {
+    padding: 4px;
+    width: 200px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: -20px;
+}
+  
+details > p {
+    background-color: white;
+    border: 2px solid #222227;
+    border-color: #EA684C;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 16px;
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 450px;
+    text-align: center;
+}
+
+/*--------------- Home Button ---------------*/
+img {
+    max-width: 110%;
+    max-height: 110%;
+   }
+
+.homebtn {
+    position: absolute;
+    margin-top: auto;
+    height: 50px;
+    width: 60px;
+    margin-left: 700px;
+    cursor: pointer;
+}

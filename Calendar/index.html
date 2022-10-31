@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--------------- Head Calendar --------------->
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.typekit.net/wmh4xxw.css">
+<!--------------- End Head Calendar --------------->
+</head>
+<body>
+<!--------------- Body Navigation Bar --------------->
+<div id="navigationbar">
+    <div class="leftside">
+        <ul>
+            <li>
+                <div class="logo">
+                    <h2>Grundfos</h2>
+                    <h3>Kollegiet</h3>
+                </div>
+            </li>
+            <li><a href="">Building</a></li>
+            <li><a href="">Surroundings</a></li>
+            <li><a href="">Calendar</a></li>
+            <li><a href="">Rules</a></li>
+            <li><a href="">Contacts</a></li>
+        </ul>
+    </div>
+    <div class="rightside">
+        <ul>
+            <li><div id="vertical_line"></div></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href=""><p>DK<span class="langswitch">/ENG</p></span></a></li>
+        </ul> 
+    </div>
+</div>
+<!--------------- End Body Navigation Bar --------------->
+<!--------------- Body More Information --------------->
+<div class="Infos">
+    <details>
+        <summary>
+            <img src="/images/info-icon.png" alt="moreinfo" class="moreinfo">
+        </summary>
+        <p>You can see the events that is going to take place, <br>
+            the cleaning routines <br>
+            and when the washing machines in the building are free to use. <br>
+            To book or sign up go to the website.</p>
+      </details>
+</div>
+<!--------------- End Body More Information --------------->
+<!--------------- Body Calendar --------------->
+<div class="row">
+        <div class="column">
+            <div class="container">
+                <div class="calendar">
+                    <div class="month">
+                        <i class="fas fa-angle-left prev"></i>
+                            <div class="date">
+                                <h1></h1>
+                                <p></p>
+                            </div>
+                        <i class="fas fa-angle-right next"></i>
+                    </div>
+                        <div class="weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                    <div class="days"></div>
+                </div>
+            </div>
+        </div>
+    <div class="column">
+<!--------------- Body Filter --------------->
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Filter</button>
+            <div id="myDropdown" class="dropdown-content">
+              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+              <a href="#events">Events</a>
+              <a href="#groupEvents">Group Events</a>
+              <a href="#cleaning">Cleaning</a>
+              <a href="#laundrette">Laundrette</a>
+            </div>
+          </div>
+<!--------------- End Body Filter --------------->
+        <div class="inprogram">In Program</div>
+        <span class="line"></span>
+        <div class="list">   
+            <div class="events">12.09.2022
+                <p>Cleaning Kitchen</p>
+            </div>
+            <div class="events">22.09.2022
+                <p>Washing Machine</p>
+            </div>
+            <div class="events">01.10.2022
+                <p>Sleepover Night</p>
+            </div>
+            <div class="events">25.10.2022
+                <p>Cleaning Balcony</p>
+            </div>
+            <div class="events">31.10.2022
+                <p>Time to be Creative!</p>
+            </div>
+            <!-- Oops! Page
+                <p>There are no events today!</p>
+            -->
+            <div class="cleaning">05.11.2022
+                <p>Cleaning Common Room</p>
+            </div>
+            <div class="laundrette">14.11.2022
+                <p>Washing Machine</p>
+            </div>
+            <div class="cleaning">17.11.2022
+                <p>Cleaning Kitchen</p>
+            </div>
+            <div class="laundrette">28.11.2022
+                <p>Washing Machine</p>
+            </div>
+            <div class="events">31.11.2022
+                <p>Bartender Workshop</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------- Home Button --------------->
+<div class="homebtn">
+    <img src="/images/homelogo.png" alt="home-button">
+</div>
+<!--------------- End Home Button --------------->
+<!-- How to connect script to HTML file -->
+<script src="script.js"></script>
+<!--------------- End Body Calendar --------------->
+</body>
+</html>
